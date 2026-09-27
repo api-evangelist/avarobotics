@@ -1,0 +1,56 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 2
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.avarobotics.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: avarobotics.com
+  role: api
+  relation: own
+- host: dev.wix.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: wix.com
+  role: other
+  relation: platform
+- host: www.avarobotics.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - Security
+  - PrivacyPolicy
+  - Newsroom
+  - ChangeLog
+  - Blog
+  - Website
+  serves:
+  - docs
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: avarobotics.com
+  role: website
+  relation: own

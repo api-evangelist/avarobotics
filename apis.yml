@@ -1,23 +1,84 @@
 aid: avarobotics
+
 name: Avarobotics
-description: 'Avarobotics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://static.wixstatic.com/media/90f1de_c6f2b8bde1c54d9bbec1e088dd64ddae%7Emv2.png/v1/fit/w_2500,h_1330,al_c/90f1de_c6f2b8bde1c54d9bbec1e088dd64ddae%7Emv2.png
+
+description: Ava Robotics develops telepresence and mobile base robots for workplace and healthcare environments. Their technology enables remote
+  experts to interact with on‑site personnel, improving safety, efficiency, and collaboration across industries such as hospitals, clean rooms,
+  and hybrid workspaces. The company offers a suite of robotic solutions, including the Ava Telepresence robot, mobile base platforms, and integrated
+  software for remote operation and monitoring.
+
 url: https://raw.githubusercontent.com/api-evangelist/avarobotics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
+- Robotics
+- Telepresence
+- Healthcare
+- Automation
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/avarobotics-llms.txt
+- type: Hosts
+  url: hosts/avarobotics-hosts.yml
+- type: Vendors
+  url: vendors/avarobotics-vendors.yml
+- type: TermsOfService
+  url: https://www.avarobotics.com/terms-conditions
+- type: Security
+  url: https://www.avarobotics.com/security
+- type: PrivacyPolicy
+  url: https://www.avarobotics.com/privacy
+- type: Newsroom
+  url: https://www.avarobotics.com/news
+- type: ChangeLog
+  url: https://www.avarobotics.com/whats-new
+- type: Blog
+  url: https://www.avarobotics.com/blog
+- type: DomainSecurity
+  url: security/avarobotics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/avarobotics
+  url: https://www.avarobotics.com
+
+apis:
+- name: Avarobotics API
+  description: API documentation for Avarobotics robots and platform
+  humanURL: https://www.avarobotics.com/documents
+  baseURL: null
+  aid: avarobotics:avarobotics-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation pages are HTML without any OpenAPI, AsyncAPI, GraphQL, gRPC or WSDL files.
+  evidence:
+  - url: https://www.avarobotics.com/documents
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
